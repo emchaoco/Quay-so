@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quay số trúng thưởng</title>
+    <link rel="stylesheet" href="web.css"> <!-- Liên kết đến tệp CSS -->
+</head>
+<body>
+
+<header>
+    <h1>Quay Số Trúng Thưởng</h1>
+</header>
+
+<div id="actionSection">
+    <button id="showRegistrationButton">Đăng ký</button>
+    <button id="showAdminLoginButton">Đăng nhập Admin</button>
+</div>
+
+<!-- Phần đăng ký -->
+<section id="registrationSection" style="display: none;">
+    <h2>Đăng Ký Thông Tin</h2>
+    <form id="registrationForm">
+        <input type="text" id="name" placeholder="Họ và tên" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Mật khẩu" required>
+        <input type="text" id="phone" placeholder="Số điện thoại" required>
+        <input type="text" id="address" placeholder="Địa chỉ" required>
+        <button type="submit">Đăng Ký</button>
+    </form>
+    <div id="registrationMessage"></div>
+</section>
+
+<!-- Phần quay số -->
+<section id="spinSection" style="display: none;">
+    <h2>Nhấn để quay số!</h2>
+    <div id="randomNumberSquare">0</div>
+    <button id="spinButton">Quay</button>
+    <div id="prizeList">
+        <h3>Danh sách quà</h3>
+        <ul id="prizes">
+            <li>1. Xe máy</li>
+            <li>2. Mũ bảo hiểm</li>
+            <li>3. Thẻ quà tặng 100k</li>
+            <li>4. Thẻ quà tặng 200k</li>
+            <li>5. Balo thời trang</li>
+            <li>6. Bộ đồ chơi</li>
+            <li>7. tivi</li>
+            <li>8. Sách hay</li>
+            <li>9. Tủ lạnh mini</li>
+            <li>10. Điện thoại </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Phần đăng nhập admin -->
+<section id="adminLoginSection" style="display: none;">
+    <h2>Đăng Nhập Admin</h2>
+    <form id="adminLoginForm">
+        <input type="password" id="adminPassword" placeholder="Mật khẩu admin" required>
+        <button type="submit">Đăng Nhập</button>
+    </form>
+    <div id="loginMessage"></div>
+</section>
+
+<!-- Danh sách người dùng (chỉ hiển thị sau khi admin đăng nhập) -->
+<section id="userListSection" style="display: none;">
+    <h2>Danh Sách Người Dùng Đã Đăng Ký</h2>
+    <table id="userList" style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Họ và tên</th>
+                <th>Email</th>
+                <th>Mật khẩu</th>
+                <th>Điện thoại</th>
+                <th>Địa chỉ</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button id="clearUsersButton">Xóa tất cả người dùng</button>
+</section>
+
+<script src="web.js"></script> <!-- Liên kết đến tệp JavaScript -->
+</body>
+</html>
